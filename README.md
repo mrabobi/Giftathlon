@@ -13,3 +13,9 @@
   </a>
   </p>
 
+
+## Team members:
+
+- Chirica Demetra Bianca
+- Miron Robert Andrei
+- Susan Stefan Claudiu
