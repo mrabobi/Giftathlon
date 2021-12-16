@@ -12,6 +12,8 @@
 - Miron Robert Andrei
 - Susan Stefan Claudiu
 
+## Links
+- [Ontologies](https://github.com/mrabobi/Giftathon/tree/main/ontologies) 
 
 ## Usecase
   <p align="center">
