@@ -15,6 +15,7 @@
 ## Links
 - [Ontologies](https://github.com/mrabobi/Giftathon/tree/main/ontologies) 
 - [Ontology Diagrams](https://github.com/mrabobi/Giftathon/tree/main/ontology-diagrams)
+- [Documentation](https://github.com/mrabobi/Giftathon/blob/main/documentation.html)
 
 ## Usecase
   <p align="center">
