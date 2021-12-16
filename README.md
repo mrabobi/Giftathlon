@@ -6,6 +6,13 @@
   
 # Giftathon - WADe 2021 :: Hackathon
 
+## Team members:
+
+- Chirica Demetra Bianca
+- Miron Robert Andrei
+- Susan Stefan Claudiu
+
+
 ## Usecase
   <p align="center">
   <a href="https://github.com/mrabobi/giftathon">
@@ -13,9 +20,9 @@
   </a>
   </p>
 
-
-## Team members:
-
-- Chirica Demetra Bianca
-- Miron Robert Andrei
-- Susan Stefan Claudiu
+## Graph
+  <p align="center">
+  <a href="https://github.com/mrabobi/giftathon">
+    <img src="GiftathonGraph.png" alt="Logo" >
+  </a>
+  </p>
