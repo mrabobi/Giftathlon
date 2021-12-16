@@ -1,0 +1,887 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#"
+     xml:base="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-2="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#CannotTransport -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#CannotTransport">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Deliver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Deliver">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GiftingProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GiftingProperties"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#RequiresCondition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#RequiresCondition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GiftingProperties"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedGift"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedGift -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedGift">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GiftingProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAgeCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAgeCategory">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasGender -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasGender">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasHobby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasHobby">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAge">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bianca -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bianca">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">24</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bobi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bobi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Botosani -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Botosani">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Car -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Car">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Claudiu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Claudiu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sports"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">22</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cluj -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cluj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dog -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dog">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Doll -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Doll">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dragon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dragon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Rocket"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dress -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dress">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Drums -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Drums">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Eyeliner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Eyeliner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fronzen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fronzen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Galati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Galati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GamingConsole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GamingConsole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Guitar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Guitar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Iasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Iasi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jacket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jacket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jeans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jeans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Laptop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Laptop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lego -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lego">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lipstick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lipstick">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Marte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Marte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mascara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mascara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mimi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mimi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">6</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Noua_Zeenlanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Noua_Zeenlanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Phone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Phone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Piano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Piano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <CannotTransport rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Marte"/>
+        <RequiresCondition rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sunny"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plush -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plush">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Raining -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Raining">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Ricardo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Ricardo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sports"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">14</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Robert -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Robert">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person"/>
+        <hasAgeCategory rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <hasGender rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+        <hasHobby rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#int">23</hasAge>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Rocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Rocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <CannotTransport rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Noua_Zeenlanda"/>
+        <RequiresCondition rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Raining"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <CannotTransport rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Galati"/>
+        <RequiresCondition rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Snowing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Snowing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Snowing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Socks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Socks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sports -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sports">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Suceava -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Suceava">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sunny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sunny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#T-Shirt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#T-Shirt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Tablet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Tablet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport"/>
+        <CannotTransport rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Marte"/>
+        <RequiresCondition rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Unicorn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Unicorn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Rocket"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Violin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Violin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument"/>
+        <DeliveredBy rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck"/>
+        <SuggestedFor rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

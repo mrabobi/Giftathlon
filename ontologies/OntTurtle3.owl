@@ -1,0 +1,595 @@
+@prefix : <http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2> .
+
+<http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#CannotTransport
+:CannotTransport rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :DeliveryProperties ;
+                 rdfs:domain :Transport ;
+                 rdfs:range :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Deliver
+:Deliver rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :DeliveryProperties ;
+         rdfs:domain :Transport ;
+         rdfs:range :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveredBy
+:DeliveredBy rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :DeliveryProperties ;
+             rdfs:domain :Gift ;
+             rdfs:range :Transport .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#DeliveryProperties
+:DeliveryProperties rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GiftingProperties
+:GiftingProperties rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#PersonProperties
+:PersonProperties rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Transport ;
+                  rdfs:range :Condition .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#RequiresCondition
+:RequiresCondition rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :DeliveryProperties .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedFor
+:SuggestedFor rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :GiftingProperties ;
+              owl:inverseOf :SuggestedGift ;
+              rdfs:domain :Gift ;
+              rdfs:range :Demographics ,
+                         :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#SuggestedGift
+:SuggestedGift rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :GiftingProperties ;
+               rdfs:domain :Demographics ,
+                           :Hobby ;
+               rdfs:range :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAgeCategory
+:hasAgeCategory rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :PersonProperties ;
+                rdfs:domain :Person ;
+                rdfs:range :AgeDemographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasGender
+:hasGender rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :PersonProperties ;
+           rdfs:domain :Person ;
+           rdfs:range :Gender .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasHobby
+:hasHobby rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :PersonProperties ;
+          rdfs:domain :Person ;
+          rdfs:range :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :PersonProperties ;
+             rdfs:domain :Person ;
+             rdfs:range :Location .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#hasAge
+:hasAge rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Person ;
+        rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#AgeDemographics
+:AgeDemographics rdf:type owl:Class ;
+                 rdfs:subClassOf :Demographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clothes
+:Clothes rdf:type owl:Class ;
+         rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Condition
+:Condition rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Demographics
+:Demographics rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Electronic
+:Electronic rdf:type owl:Class ;
+            rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:subClassOf :Demographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gift
+:Gift rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Hobby
+:Hobby rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :Demographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Makeup
+:Makeup rdf:type owl:Class ;
+        rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Musical_Instrument
+:Musical_Instrument rdf:type owl:Class ;
+                    rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Person
+:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Road
+:Road rdf:type owl:Class ;
+      rdfs:subClassOf :Condition .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Toy
+:Toy rdf:type owl:Class ;
+     rdfs:subClassOf :Gift .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Transport
+:Transport rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wheater
+:Wheater rdf:type owl:Class ;
+         rdfs:subClassOf :Condition .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Beauty
+:Beauty rdf:type owl:NamedIndividual ,
+                 :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bianca
+:Bianca rdf:type owl:NamedIndividual ,
+                 :Person ;
+        :hasAgeCategory :Major ;
+        :hasGender :Female ;
+        :hasHobby :Beauty ,
+                  :Fashion ;
+        :hasAge "24"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Bobi
+:Bobi rdf:type owl:NamedIndividual ,
+               :Person ;
+      :hasAgeCategory :Minor ;
+      :hasGender :Male ;
+      :hasHobby :Gaming ,
+                :Music ;
+      :hasAge "16"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Botosani
+:Botosani rdf:type owl:NamedIndividual ,
+                   :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Car
+:Car rdf:type owl:NamedIndividual ,
+              :Toy ;
+     :DeliveredBy :Santa_Slade ;
+     :SuggestedFor :Male ,
+                   :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cat
+:Cat rdf:type owl:NamedIndividual ,
+              :Animal ;
+     :DeliveredBy :Santa_Slade ;
+     :SuggestedFor :Nature .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Claudiu
+:Claudiu rdf:type owl:NamedIndividual ,
+                  :Person ;
+         :hasAgeCategory :Major ;
+         :hasGender :Male ;
+         :hasHobby :Gaming ,
+                   :Nature ,
+                   :Sports ;
+         :hasAge "22"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Clear
+:Clear rdf:type owl:NamedIndividual ,
+                :Road .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Cluj
+:Cluj rdf:type owl:NamedIndividual ,
+               :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dog
+:Dog rdf:type owl:NamedIndividual ,
+              :Animal ;
+     :DeliveredBy :Santa_Slade ;
+     :SuggestedFor :Nature .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Doll
+:Doll rdf:type owl:NamedIndividual ,
+               :Toy ;
+      :DeliveredBy :Santa_Slade ;
+      :SuggestedFor :Female ,
+                    :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dragon
+:Dragon rdf:type owl:NamedIndividual ,
+                 :Animal ;
+        :DeliveredBy :Rocket ;
+        :SuggestedFor :Major ,
+                      :Nature .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Dress
+:Dress rdf:type owl:NamedIndividual ,
+                :Clothes ;
+       :DeliveredBy :Plane ,
+                    :Truck ;
+       :SuggestedFor :Fashion ,
+                     :Female ,
+                     :Major .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Drums
+:Drums rdf:type owl:NamedIndividual ,
+                :Musical_Instrument ;
+       :DeliveredBy :Plane ;
+       :SuggestedFor :Music .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Eyeliner
+:Eyeliner rdf:type owl:NamedIndividual ,
+                   :Makeup ;
+          :DeliveredBy :Truck ;
+          :SuggestedFor :Beauty ,
+                        :Female ,
+                        :Major .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fashion
+:Fashion rdf:type owl:NamedIndividual ,
+                  :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Female
+:Female rdf:type owl:NamedIndividual ,
+                 :Gender .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fish
+:Fish rdf:type owl:NamedIndividual ,
+               :Animal ;
+      :DeliveredBy :Santa_Slade ;
+      :SuggestedFor :Female ,
+                    :Major ,
+                    :Nature .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Fronzen
+:Fronzen rdf:type owl:NamedIndividual ,
+                  :Road .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Galati
+:Galati rdf:type owl:NamedIndividual ,
+                 :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Gaming
+:Gaming rdf:type owl:NamedIndividual ,
+                 :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#GamingConsole
+:GamingConsole rdf:type owl:NamedIndividual ,
+                        :Electronic ;
+               :DeliveredBy :Plane ;
+               :SuggestedFor :Gaming ,
+                             :Major ,
+                             :Male .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Guitar
+:Guitar rdf:type owl:NamedIndividual ,
+                 :Musical_Instrument ;
+        :DeliveredBy :Truck ;
+        :SuggestedFor :Music .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Iasi
+:Iasi rdf:type owl:NamedIndividual ,
+               :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jacket
+:Jacket rdf:type owl:NamedIndividual ,
+                 :Clothes ;
+        :DeliveredBy :Truck ;
+        :SuggestedFor :Fashion ,
+                      :Major ,
+                      :Male .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Jeans
+:Jeans rdf:type owl:NamedIndividual ,
+                :Clothes ;
+       :DeliveredBy :Truck ;
+       :SuggestedFor :Fashion ,
+                     :Female .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Laptop
+:Laptop rdf:type owl:NamedIndividual ,
+                 :Electronic ;
+        :DeliveredBy :Truck ;
+        :SuggestedFor :Gaming ,
+                      :Major .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lego
+:Lego rdf:type owl:NamedIndividual ,
+               :Toy ;
+      :DeliveredBy :Santa_Slade ;
+      :SuggestedFor :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Lipstick
+:Lipstick rdf:type owl:NamedIndividual ,
+                   :Makeup ;
+          :DeliveredBy :Truck ;
+          :SuggestedFor :Beauty ,
+                        :Female ,
+                        :Major .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Major
+:Major rdf:type owl:NamedIndividual ,
+                :AgeDemographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Male
+:Male rdf:type owl:NamedIndividual ,
+               :Gender .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Marte
+:Marte rdf:type owl:NamedIndividual ,
+                :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mascara
+:Mascara rdf:type owl:NamedIndividual ,
+                  :Makeup ;
+         :DeliveredBy :Truck ;
+         :SuggestedFor :Beauty ,
+                       :Female ,
+                       :Major .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Mimi
+:Mimi rdf:type owl:NamedIndividual ,
+               :Person ;
+      :hasAgeCategory :Minor ;
+      :hasGender :Female ;
+      :hasHobby :Fashion ;
+      :hasAge "6"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Minor
+:Minor rdf:type owl:NamedIndividual ,
+                :AgeDemographics .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Music
+:Music rdf:type owl:NamedIndividual ,
+                :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Nature
+:Nature rdf:type owl:NamedIndividual ,
+                 :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Noua_Zeenlanda
+:Noua_Zeenlanda rdf:type owl:NamedIndividual ,
+                         :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Phone
+:Phone rdf:type owl:NamedIndividual ,
+                :Electronic ;
+       :DeliveredBy :Truck ;
+       :SuggestedFor :Female ,
+                     :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Piano
+:Piano rdf:type owl:NamedIndividual ,
+                :Musical_Instrument ;
+       :DeliveredBy :Plane ;
+       :SuggestedFor :Music .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plane
+:Plane rdf:type owl:NamedIndividual ,
+                :Transport ;
+       :CannotTransport :Marte ;
+       :RequiresCondition :Sunny .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Plush
+:Plush rdf:type owl:NamedIndividual ,
+                :Toy ;
+       :DeliveredBy :Santa_Slade .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Raining
+:Raining rdf:type owl:NamedIndividual ,
+                  :Wheater .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Ricardo
+:Ricardo rdf:type owl:NamedIndividual ,
+                  :Person ;
+         :hasAgeCategory :Minor ;
+         :hasGender :Male ;
+         :hasHobby :Sports ;
+         :hasAge "14"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Robert
+:Robert rdf:type owl:NamedIndividual ,
+                 :Person ;
+        :hasAgeCategory :Major ;
+        :hasGender :Male ;
+        :hasHobby :Gaming ;
+        :hasAge "23"^^xsd:int .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Rocket
+:Rocket rdf:type owl:NamedIndividual ,
+                 :Transport ;
+        :CannotTransport :Noua_Zeenlanda ;
+        :RequiresCondition :Raining .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Santa_Slade
+:Santa_Slade rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :CannotTransport :Galati ;
+             :RequiresCondition :Snowing .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Snowing
+:Snowing rdf:type owl:NamedIndividual ,
+                  :Wheater .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Socks
+:Socks rdf:type owl:NamedIndividual ,
+                :Clothes ;
+       :DeliveredBy :Truck ;
+       :SuggestedFor :Major ,
+                     :Male .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sports
+:Sports rdf:type owl:NamedIndividual ,
+                 :Hobby .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Suceava
+:Suceava rdf:type owl:NamedIndividual ,
+                  :Location .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Sunny
+:Sunny rdf:type owl:NamedIndividual ,
+                :Wheater .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#T-Shirt
+:T-Shirt rdf:type owl:NamedIndividual ,
+                  :Clothes ;
+         :DeliveredBy :Truck ;
+         :SuggestedFor :Fashion .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Tablet
+:Tablet rdf:type owl:NamedIndividual ,
+                 :Electronic ;
+        :DeliveredBy :Truck ;
+        :SuggestedFor :Minor .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Truck
+:Truck rdf:type owl:NamedIndividual ,
+                :Transport ;
+       :CannotTransport :Marte ;
+       :RequiresCondition :Clear .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Unicorn
+:Unicorn rdf:type owl:NamedIndividual ,
+                  :Animal ;
+         :DeliveredBy :Rocket ;
+         :SuggestedFor :Minor ,
+                       :Nature .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Violin
+:Violin rdf:type owl:NamedIndividual ,
+                 :Musical_Instrument ;
+        :DeliveredBy :Truck ;
+        :SuggestedFor :Music .
+
+
+###  http://www.semanticweb.org/claud/ontologies/2021/11/untitled-ontology-2#Wet
+:Wet rdf:type owl:NamedIndividual ,
+              :Road .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
