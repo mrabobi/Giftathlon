@@ -4,7 +4,7 @@
   </a>
   </p>
   
-# Giftathlon - WADe 2021 :: Hackathon
+# Giftathon - WADe 2021 :: Hackathon
 
 
 
