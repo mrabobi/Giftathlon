@@ -14,6 +14,7 @@
 
 ## Links
 - [Ontologies](https://github.com/mrabobi/Giftathon/tree/main/ontologies) 
+- [Ontology Diagrams](https://github.com/mrabobi/Giftathon/tree/main/ontology-diagrams)
 
 ## Usecase
   <p align="center">
@@ -28,3 +29,11 @@
     <img src="GiftathonGraph.png" alt="Logo" >
   </a>
   </p>
+  
+## Ontology Diagram
+  <p align="center">
+  <a href="https://github.com/mrabobi/giftathon">
+    <img src="ontology-diagrams/Overall.jpg" alt="Logo" >
+  </a>
+  </p>
+
