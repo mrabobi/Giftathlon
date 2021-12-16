@@ -1,6 +1,6 @@
   <p align="center">
   <a href="https://github.com/mrabobi/semestudy">
-    <img src="giftathlon.png" alt="Logo" width="750" height="250">
+    <img src="giftathon.png" alt="Logo" width="750" height="250">
   </a>
   </p>
   
